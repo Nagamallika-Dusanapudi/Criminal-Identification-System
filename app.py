@@ -20,12 +20,12 @@ import time
 
 id1=50
 id2=id1
-filename='C:/Users/dell/Desktop/main project/criminals.csv'
+filename='files/criminals.csv'
 
 class VideoTransformer(VideoTransformerBase):
     def transform(self, frame):
         img = frame.to_ndarray(format="bgr24")
-        face_cascade = cv2.CascadeClassifier('C://Users//dell//Anaconda3//lib//site-packages//cv2//data//haarcascade_frontalface_default.xml')
+        #face_cascade = cv2.CascadeClassifier('C://Users//dell//Anaconda3//lib//site-packages//cv2//data//haarcascade_frontalface_default.xml')
         results = MTCNN.mtcnn_detector.detect_faces(img)
         faces = []
         names={'4':'Mallika','3':'Pooja','UNKNOWN':'UNKNOWN'}
@@ -55,7 +55,7 @@ class VideoTransformer(VideoTransformerBase):
             b=cv2.putText(img, label[0], (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255,255,255), 2)
         if MTCNN.count==0 and label[0]!='UNKNOWN':
             line_number = int(label[0])
-            myfilepath='C:/Users/dell/Desktop/main project/criminals.csv'
+            myfilepath='files/criminals.csv'
             with open(myfilepath, 'r') as f:
                 mycsv = csv.reader(f)
                 mycsv = list(mycsv)
@@ -71,9 +71,9 @@ class VideoTransformer(VideoTransformerBase):
 
 @st.cache(suppress_st_warning=True)
 def load_data():
-    data=pd.read_csv('C:/Users/dell/Desktop/main project/20_victims_of_rape.csv')
-    data1=pd.read_csv('C:/Users/dell/Desktop/main project/10_Property_stolen_and_recovered.csv')
-    data2=pd.read_csv('C:/Users/dell/Desktop/main project/35_Human_rights_violation_by_police.csv')
+    data=pd.read_csv('files/20_victims_of_rape.csv')
+    data1=pd.read_csv('files/10_Property_stolen_and_recovered.csv')
+    data2=pd.read_csv('files/35_Human_rights_violation_by_police.csv')
     return data,data1,data2
 
 st.title("Criminal Recognition System")
@@ -188,8 +188,8 @@ elif choice=='crime statistics':
 
 elif choice=='About App':
     st.subheader("Initiated for crime free India")
-    image=Image.open('C:/Users/dell/Desktop/main project/stop crime image.jfif')
-    st.image(image,use_column_width=True)
+    #image=Image.open('C:/Users/dell/Desktop/main project/stop crime image.jfif')
+    #st.image(image,use_column_width=True)
 
 
 
