@@ -5,9 +5,12 @@ matplotlib==3.3.4
 mtcnn==0.1.0                              
 netifaces==0.10.9                  
 numpy==1.19.5                   
-opencv-python     
-pandas==1.2.4                   
-plotly==4.14.3                                    
+opencv-python==4.5.2.52   
+pandas==1.2.4  
+Pillow==8.2.0
+plotly==4.14.3  
+scikit-learn==0.24.1
+scipy==1.6.2
 streamlit==0.82.0                   
 streamlit-webrtc==0.20.1                                   
 tensorflow==2.5.0                               
