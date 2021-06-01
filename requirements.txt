@@ -1,6 +1,5 @@
 geopy==2.1.0                   
-h5py==3.1.0                 
-hdf5==1.10            
+h5py==3.1.0                            
 keras==  2.4.3 
 matplotlib==3.3.4                              
 mtcnn==0.1.0                              
