@@ -3,7 +3,7 @@ h5py==3.1.0
 matplotlib==3.3.4                              
 mtcnn==0.1.0                              
 netifaces==0.10.9                  
-numpy==1.19.5                   
+numpy                  
 opencv-python==4.5.2.52   
 pandas==1.2.4  
 Pillow==8.2.0
